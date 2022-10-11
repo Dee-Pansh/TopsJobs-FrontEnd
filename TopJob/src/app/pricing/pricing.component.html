@@ -1,0 +1,74 @@
+<app-navbar></app-navbar>
+<div style="background-image: url({{myimage}});
+background-size: cover;">
+    
+<div class="container">
+    <h1>Best Pricing Schemes For Potential Employers Like You</h1>
+    <div class="main">
+        <!--  -->
+      <div class="column">
+        <mat-card class="example-card bg-1">
+          <mat-card-header>
+            <mat-card-title>Starting At</mat-card-title>
+            <mat-card-subtitle><small>$</small>300</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <h3>Basic Plan</h3>
+            <mat-list role="list">
+              <mat-list-item role="listitem">Single Login</mat-list-item>
+              <mat-list-item role="listitem">Unlimited Resumes</mat-list-item>
+              <mat-list-item role="listitem">Expires In 30 days</mat-list-item>
+            </mat-list>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-raised-button (click)="WhichPlan('Basic Plan')" class="mb-20 btn-1">Buy Now</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+      <div class="column">
+        <mat-card class="example-card bg-2">
+          <mat-card-header>
+            <mat-card-title>Starting At</mat-card-title>
+            <mat-card-subtitle><small>$</small>580</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <h3>Pro Plan</h3>
+            <mat-list role="list">
+              <mat-list-item role="listitem">Multiple Logins</mat-list-item>
+              <mat-list-item role="listitem">Unlimited Resumes</mat-list-item>
+              <mat-list-item role="listitem">Expires In 60 Days</mat-list-item>
+              <mat-list-item role="listitem">Live Technical Support</mat-list-item>
+            </mat-list>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-raised-button (click)="WhichPlan('Pro Plan')" class="mb-20 btn-2">Buy Now</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+      <div class="column">
+        <mat-card class="example-card bg-3">
+          <mat-card-header>
+            <mat-card-title>Starting At</mat-card-title>
+            <mat-card-subtitle><small>$</small>650</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <h3>Expert Plan</h3>
+            <mat-list role="list">
+                <mat-list-item role="listitem">Ultra Saving Pack</mat-list-item> 
+              <mat-list-item role="listitem">Multiple Logins</mat-list-item>
+              <mat-list-item role="listitem">Unlimited Resumes</mat-list-item>
+              <mat-list-item role="listitem">Expires In 90 Days</mat-list-item>
+              <mat-list-item role="listitem">Premium Member</mat-list-item><br>
+              <mat-list-item role="listitem">1% Contribution To Girls Education</mat-list-item><br>
+              <mat-list-item role="listitem">Live Support</mat-list-item>
+            </mat-list>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-raised-button (click)="WhichPlan('Expert Plan')" class="mb-20 btn-3">Buy Now</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

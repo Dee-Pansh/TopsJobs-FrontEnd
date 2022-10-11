@@ -1,0 +1,96 @@
+
+
+    <input type="text" [(ngModel)]="input" name="searchterm">
+    <button (click)="OnSubmit(input)"> Search</button>
+
+<section class="jse"> 
+    
+ 
+  <div class="col-lg-8 mb-3" *ngFor="let i of Jobs" >
+    
+    <div class="box shadow-sm">
+    <h2>{{i.jobCategory}}</h2> 
+    
+    <h3 color="silver"><mat-icon>business </mat-icon> {{i.companyName}}  <mat-icon>room </mat-icon>{{i.noOfVacancies}}</h3>
+    <h4>{{i.jobDescription}}</h4>
+    
+ <button type="button" (click)="apply(i.jobId)" class="btn btn-danger">Apply</button>
+
+  </div>  
+  </div>
+  </section>  
+ 
+
+ <!--<<div class="search1">
+    <!-- <form #searchval="ngForm"  (ngSubmit)="onSubmit(searchval.value)"> 
+        <input type="text" [(ngModel)]="input" name="searchterm">
+        <button (click)="OnSubmit(input)"> Search</button>
+    <table border="1">
+        <thead>
+            <th>postedBy</th>
+            <th>companyName</th>
+            <th>jobDescription</th>
+            <th>createdDate</th>
+            <th>lastDateToApply</th>
+            <th>noOfVacancies</th>
+            <th>jobCategory</th>
+        </thead>
+        <tbody>
+
+            <tr *ngFor="let job of Jobs">
+                <td>{{job.postedBy}}</td>
+                <td>{{job.companyName}}</td>
+                <td>{{job.jobDescription}}</td>
+                <td>{{job.dateCreated}}</td>
+     
+      <td>{{job.lastDatetoApply}}</td>
+                <td>{{job.noOfVacancies}}</td>
+                <td>{{job.jobCategory}}</td>
+                
+                
+            </tr>
+        </tbody>
+    </table>
+ </div>  
+
+
+<div class="m-3">
+    <h3>Angular search by filter</h3>
+    <div class="wrap">
+      <div class="search">
+        <input
+          type="text"
+          [(ngModel)]="term"
+          class="searchTerm"
+          placeholder="What are you looking for?"
+        />
+      </div>
+  
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Country</th>
+            <th scope="col">Area</th>
+            <th scope="col">Population</th>
+          </tr>
+        </thead>
+  
+        <tbody>
+          <tr *ngFor="let i of jobs | filter: term">
+            <td>
+              <img
+                [src]="
+                  'https://upload.wikimedia.org/wikipedia/commons/' + i.jobDescription
+                "
+                class="mr-2"
+                style="width: 20px"
+              />
+              {{ i.jobCategory}
+            </td>
+            <td>{{ i.noOfVacancies | number }}</td>
+            <td>{{ i.jobId | number }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>-->

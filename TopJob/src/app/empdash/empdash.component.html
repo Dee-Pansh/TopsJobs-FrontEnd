@@ -1,0 +1,59 @@
+<app-navbar></app-navbar>
+<section class="jse">
+  <p class="username">
+    Welcome {{name}} A Employer</p> 
+    <br>
+    <br>
+    <button class="username" (click)="Logout()">
+      LogOut</button>
+    <h1 class="head">Jobs Posted By You</h1>
+  <div class="col-lg-8 mb-3" *ngFor="let i of jobs">
+
+    <div class="box shadow-sm">
+    <h2>{{i.jobCategory}}</h2> 
+    
+    <h3 color="silver"><mat-icon>business </mat-icon> {{i.companyName}}  <mat-icon>room </mat-icon>{{i.noOfVacancies}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{this.viewss}} </h3>
+    <h4>{{i.jobDescription}}</h4>
+   <button type="button" (click)="ViewApps(i.jobId)" class="btn btn-warning">Applicants Info</button>
+    <button type="submit" (click)="deleteJob(i.jobId)" class="btn btn-primary">Delete</button>
+  </div>  
+  </div>
+  </section> 
+  <section class="post">
+    <h1 class="head2">Post Jobs Here</h1>
+    <div class="col-lg-8 mb-3">
+    <div class="box shadow-sm">
+     
+   <!--  <form #userPost="ngForm" (ngSubmit)="onSubmit(userPost.value)">
+  <input type="text" name = "postedBy" ngModel placeholder="Posted By"><br>
+ <input type= "text "name= "companyName" ngModel placeholder="Company Name"><br>
+ <input type= "date"name= "createdDate"  ngModel placeholder="Created Date"><br>
+ <input type= "date" name= "lastDateToApply" ngModel placeholder="Last Date To Apply"><br>
+ <input type= "text"name= "jobDescription" ngModel placeholder="Job Description"><br>
+ <input type= "text" name="jobCategory" ngModel placeholder="Category "><br>
+ <input type= "number" name="noOfVacancies"ngModel placeholder="No of Vacancies"><br>
+ <button type="Submit">Submit</button>
+      </form>-->
+      <form #userPost="ngForm" (ngSubmit)="onSubmit(userPost.value)">
+        <div class="mb-3">
+          <label for="exampleInputPassword3" class="form-label">Last Date To Apply</label>
+          <input type= "date" name= "lastDateToApply" ngModel class="form-control" id="exampleInputPassword3">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword4" class="form-label">Job Category</label>
+          <input type= "text" name="jobCategory"ngModel  class="form-control" id="exampleInputPassword4">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword5" class="form-label" rows="4">Job Description</label>
+          <input  type= "text" name="jobDescription"ngModel class="form-control" id="exampleInputPassword5">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword5" class="form-label">Number of Vacancies</label>
+          <input  type= "number" name="noOfVacancies"ngModel class="form-control" id="exampleInputPassword5">
+        </div>
+        <button id="bv"  class = "btn btn-primary" type="Submit">Submit</button>
+      </form>
+    </div>
+    </div>
+  </section>
+<app-footer></app-footer>

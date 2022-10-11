@@ -1,0 +1,57 @@
+<app-navbar></app-navbar>
+<h2 style="margin-left: 500px;"> Details For Making Your Resume</h2>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <form [formGroup]="regForm"  (ngSubmit)="register(regForm)">
+
+                <div class="form-group">
+                    <label for="skills" class="fa fa-user"></label>
+                    <input type="text" placeholder="Enter Your Skills Seperated By Comma" formControlName="skills">
+                    <span class="text-danger" *ngIf="regForm.controls['skills'].errors && regForm.controls['skills'].touched">
+                        <br>Atleast One Skill is Required
+                    </span> 
+
+                </div>
+
+
+                <div class="form-group">
+                    <label for="MajorProject" class="fa fa-user"></label>
+                    <input type="text" placeholder="Enter Your MajorProject" formControlName="majorProject">
+                    <span class="text-danger" *ngIf="regForm.controls['majorProject'].errors && regForm.controls['majorProject'].touched">
+                        <br>MajorProject is Required
+                    </span>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="Work_Experience_In_Years" class="fa fa-mobile"></label>
+                    <input type="tel" placeholder="experience If Fresher Then Enter 0" formControlName="experience">
+                    <span class="text-danger" *ngIf="regForm.controls['experience'].errors && regForm.controls['experience'].touched">
+                        <br>Invalid experience
+                    </span>   
+                </div>
+
+                <div class="form-group">
+                    <label for="achievements" class="fa fa-envelope"></label>
+                    <input type="achievements" placeholder="Achievements" formControlName="achievements">
+                    <span class="text-danger" *ngIf="regForm.controls['achievements'].errors && regForm.controls['achievements'].touched">
+                        <br>Invalid Achievements
+                    </span>
+                </div>
+
+                <div class="text-center">
+                    <button id="submitButton" type="submit" class="btn btn-primary" [disabled]="!regForm['valid']">
+                        Register
+                    </button>
+                </div>
+
+                <div class="text-success" *ngIf="successMessage">
+                    <!-- {{regForm.value.email}} {{successMessage}} -->
+                </div>
+                <button  (click)="Move()" class="btn btn-danger">Click Me To Move To Your DashBoard</button>
+            </form> 
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

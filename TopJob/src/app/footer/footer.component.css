@@ -1,0 +1,12 @@
+.tc1{
+    left: 30%;
+}
+
+a, a:visited, a:hover, a:active {
+    color: inherit;
+  }
+  .footer{
+    position:fixed;
+bottom:0px;
+width:100%;
+  }

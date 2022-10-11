@@ -1,0 +1,40 @@
+<app-navbar></app-navbar>
+
+<section class="jse"> 
+    
+
+    <!-- public applicationId;
+    public applicantId;
+    public jobId;
+    public applicationStatus;
+    public resume; -->
+       <h2>Welcome To Applicant Page</h2>
+    <div *ngIf="status==='buy subscription to see the Applicant info' else elseBlock">
+      <button type="submit" (click)="NavToPricing()" class="btn btn-danger">Click Me To Buy The Subscription</button>
+    </div>
+    <ng-template #elseBlock>
+
+    <div class="col-lg-8 mb-3" *ngFor="let i of resumes" >
+      <div class="box shadow-sm">
+      <h2>Applicant Name :{{i.name}}</h2> 
+</div>
+      <div class="box shadow-sm">
+        <h2>Skills :{{i.skills}}</h2> 
+</div>
+        <div class="box shadow-sm">
+          <h2>Major Project :{{i.majorProject}}</h2> 
+</div>
+          <div class="box shadow-sm">
+            <h2>Experience :{{i.experience}}</h2> 
+</div>
+            <div class="box shadow-sm">
+              <h2>Achievements :{{i.achievements}}</h2> 
+      </div>
+      <!-- <h3 color="silver">Email : {{i.resume}}</h3> -->
+      
+      <button  (click)="Accept(i.applicantId,i.jobId)" class="btn btn-success">Short List</button>
+      <button  (click)="Reject(i.applicantId,i.jobId)" class="btn btn-danger">Reject</button>
+    </div>
+  </ng-template>
+    </section>  
+<app-footer></app-footer>

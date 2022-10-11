@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+
+<section class="Initial">
+
+    <img [src]="myimage">
+     <div class="home-content">
+      <h1>Find Your Dream Job</h1>  
+      <h4>Browse the latest jobs & create your Profile to connect with the best companies.</h4>
+     </div>
+    </section>
+ 
+
+<section class="employers">
+    <div class="container">
+        <h1 class="text-center">Top Recruiters</h1>
+    
+            <div class="row mt-5">
+            <div class="col-lg-3 mb-3" *ngFor="let cs of companies">
+                <div class="box shadow-sm">
+                    <img src="{{cs.image}}" >
+                </div>   
+    
+            </div>
+        </div>
+    
+    </div>
+</section>
+
+<app-footer></app-footer>

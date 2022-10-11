@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+<section class="jse"> 
+    <button class="username" (click)="Logout()">
+        LogOut</button>
+       <h2>Welcome To Your DashBoard {{admin}}</h2>
+
+       <div class="col-lg-8 mb-3" *ngFor="let i of jobs" >
+    
+        <div class="box shadow-sm">
+        <h2>{{i.jobCategory}}</h2> 
+        
+        <h3 color="silver"><mat-icon>business </mat-icon> {{i.companyName}}  <mat-icon>room </mat-icon>{{i.noOfVacancies}}</h3>
+        <h4>{{i.jobDescription}}</h4>
+      <button  (click)="Delete(i.jobId)" class="btn btn-danger">Delete</button>
+    
+      </div>  
+      </div>
+</section>  
+<app-footer></app-footer>

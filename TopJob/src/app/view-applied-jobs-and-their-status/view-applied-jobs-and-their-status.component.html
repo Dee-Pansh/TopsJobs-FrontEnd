@@ -1,0 +1,13 @@
+<app-navbar></app-navbar>
+<h1>Your Applications Status</h1>
+
+
+<div class="col-lg-8 mb-3" *ngFor="let i of applications" >
+    <div class="box shadow-sm">
+    <h2>Application Status :{{i.applicationStatus}}</h2> 
+</div>
+    <div class="box shadow-sm">
+      <h2>Job Id :{{i.jobId}}</h2> 
+    </div>
+  </div>
+<app-footer></app-footer>

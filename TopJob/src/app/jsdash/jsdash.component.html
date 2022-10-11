@@ -1,0 +1,66 @@
+<app-navbar></app-navbar>
+
+<!--
+<h1>Registered Employees</h1>
+
+<table class="table" id='tab'>
+    <thead>
+    <tr>
+        <th scope="col">CompanyName</th>
+        <th scope="col">createdDate/th>
+        <th scope="col">Job Category</th>
+        <th scope="col">Job Description</th>
+        <th scope="col">Job_ID</th>
+        <th scope="col">Last Day to Apply</th>
+        <th scope="col">No of Vacancies</th>
+    </tr>
+    </thead>
+  
+    <table>
+    <tbody>
+    <tr *ngFor="let e of jobs;">
+        <td>{{ e.companyName}}</td>
+        
+        <td>{{ e.jobCategory}}</td>
+        <td>{{ e.jobDescription }}</td>
+        
+       
+        <td>{{e.noOfVacancies}}</td>
+    </tr>
+    </tbody>
+</table> -->
+
+<section class="jse">
+    <p class="username">
+        Welcome {{name}} A JobSeeker</p> 
+        <br>
+        <!-- <button class="username" (click)="Logout()">
+            LogOut</button> -->
+            <a href="/app-view-applied-jobs-and-their-status" mat-raised-button color="accent" style="margin-right: 5px;" >View Your Applications</a>
+            <a href="/loginjs" mat-raised-button color="accent" style="margin-right: 5px;" >Logout</a>
+            <br>
+            <!-- <button type="button" (click)="NavToResumesPage()" class="btn btn-primary">Primary</button> -->
+
+    <app-search></app-search>
+    
+    <h1 class="head">  All Jobs </h1>
+ 
+  <div class="col-lg-8 mb-3" *ngFor="let i of jobs" >
+    
+    <div class="box shadow-sm">
+    <h2>{{i.jobCategory}}</h2> 
+    
+    <h3 color="silver"><mat-icon>business </mat-icon> {{i.companyName}}  <mat-icon>room </mat-icon>{{i.noOfVacancies}}</h3>
+    <h4>{{i.jobDescription}}</h4>
+  <button  (click)="apply(i.jobId)" class="btn btn-danger">Apply</button>
+
+  </div>  
+  </div>
+  </section> 
+ <app-footer></app-footer>
+ <!--<div class="col-lg-8 mb-3" >
+    
+    <div class="box shadow-sm">
+       {{job_elements|json}};
+    </div>
+        </div>-->

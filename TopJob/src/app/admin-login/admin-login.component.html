@@ -1,0 +1,57 @@
+<app-navbar></app-navbar>
+<h2 style="text-align: center;">Admin Login</h2>
+<section class="vh-100">
+    <div class="container-fluid h-custom">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-9 col-lg-6 col-xl-5">
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+            class="img-fluid" alt="Sample image">
+        </div>
+        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+          <form #jslogform="ngForm" (ngSubmit)="onSubmit(jslogform.value)">
+            
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+              <input type="email" class="form-control-lg" name= "Email" ngModel class="form-control form-control-lg"
+                placeholder="Enter a valid email address" required #em="ngModel"
+                [ngClass]="{'is-invalid': (em.touched || em.dirty) && !em.valid }" />
+                <span class="invalid-feedback">  
+                  <span *ngIf="em.hasError('required')">  
+                    User email is required.  
+                  </span>  
+                  <span *ngIf="em.hasError('emailvalidator')">  
+                    Please provide a valid email address  
+                  </span>  
+                </span>  
+              
+            </div>
+  
+            <!-- Password input -->
+            <div class="form-outline mb-3">
+              <input type="password" name="Password" ngModel class="form-control form-control-lg"
+                placeholder="Enter password" required #pV="ngModel"  
+                
+                [ngClass]=  "{'is-invalid': (pV.touched || pV.dirty) && !pV.valid }"
+                  />
+                  <span class="invalid-feedback">  
+                    <span *ngIf="pV.hasError('required')">  
+                      Password is required.  
+                    </span>  
+                  </span>  
+            </div>
+
+            <div class="text-center text-lg-start mt-4 pt-2">
+                <button type="submit" class="btn btn-primary btn-lg"
+                  style="padding-left: 2.5rem; padding-right: 2.5rem; margin-left: 130px;">Login</button>
+              </div>
+
+
+  
+          </form>
+        </div>
+      </div>
+    </div>
+    
+     
+  </section>
+<app-footer></app-footer>
